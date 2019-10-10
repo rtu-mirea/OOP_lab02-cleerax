@@ -18,6 +18,15 @@ public class Main {
 
             switch(choice) {
                 case("1"):
+                    String code = "public class task1code {\n" +
+                            "    public void code() {\n" +
+                            "        double x = Math.pow(4, 1.0/2);\n" +
+                            "        x = Math.pow(4, 2);\n" +
+                            "        x = Math.sqrt(x);\n" +
+                            "        x = Math.abs(-4);\n" +
+                            "    }\n" +
+                            "}";
+                    task1 t1 = new task1(code);
                     while(!choice2.equals("0")) {
                         System.out.println("Выберите задачу:\r\n" +
                                 "1. Определить, была ли подключена библиотека математических функций\r\n" +
@@ -31,12 +40,16 @@ public class Main {
 
                         switch(choice2) {
                             case ("1"):
+                                System.out.println(t1.chkMath());
                                 break;
                             case ("2"):
+                                System.out.println(t1.Methods());
                                 break;
                             case ("3"):
+                                System.out.println(t1.vars());
                                 break;
                             case ("4"):
+                                System.out.println(t1.operators());
                                 break;
                             case ("0"):
                                 break;
@@ -46,6 +59,7 @@ public class Main {
                     }
                     break;
                 case("2"):
+                    String t = "";
                     break;
                 case("3"):
                     break;
