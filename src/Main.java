@@ -59,7 +59,16 @@ public class Main {
                     }
                     break;
                 case("2"):
-                    String t = "";
+                    String t = "Я родился в 52 13 531 маленькой деревне. Я был еще 545 ребенком, когда на н491ас напали " +
+                            "солдаты. Иностранные5845 солдаты.";
+                    task2 t2 = new task2(t);
+                    System.out.println("Исхожный текст: " + t);
+                    t2.n1();
+                    System.out.println("Вставлено слово \"Вставка\" перед первым словом.\r\nПолученный текст: " + t2.getText());
+                    t2.n2();
+                    System.out.println("Трехзначные числа заменены палиндромами.\r\nПолученный текст: " + t2.getText());
+                    t2.n3();
+                    System.out.println("Полученный текст: " + t2.getText());
                     break;
                 case("3"):
                     break;
