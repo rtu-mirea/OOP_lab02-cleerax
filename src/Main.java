@@ -57,6 +57,7 @@ public class Main {
                                 System.out.println("Неверное значение");
                         }
                     }
+                    choice2 = "";
                     break;
                 case("2"):
                     String t = "Я родился в 52 13 531 маленькой деревне. Я был еще 545 ребенком, когда на н491ас напали " +
@@ -71,6 +72,30 @@ public class Main {
                     System.out.println("Полученный текст: " + t2.getText());
                     break;
                 case("3"):
+                    Scanner s = new Scanner(System.in);
+                    task3 t3 = new task3();
+                    while(!choice2.equals("0")) {
+                        System.out.println("Выберите задачу:\r\n" +
+                                "1. Определить, что строка содержит целое число, заключенное в кавычки\r\n" +
+                                "2. Дана строка с целыми числами. Найти числа, стоящие в кавычках и увеличить их в два раза\r\n" +
+                                "0. Выход");
+
+                        choice2 = scan.nextLine();
+
+                        switch (choice2) {
+                            case ("1"):
+                                System.out.print("Введите строку: ");
+                                System.out.println(t3.n1(s.nextLine()) ? "Верно" : "Неверно");
+                                break;
+                            case ("2"):
+                                System.out.print("Введите строку: ");
+                                System.out.println("Полученная строка: " + t3.n2(s.nextLine()));
+                                break;
+                            case ("0"):
+                                break;
+                        }
+                    }
+                    choice2 = "";
                     break;
                 case("0"):
                     break;
