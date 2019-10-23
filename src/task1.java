@@ -55,6 +55,25 @@ public class task1 {
 
     public String operators() {
         String res = "";
+        String line;
+        int n = 0;
+        for (int i = 0; i < code.length(); i++) {
+            if (code.charAt(i) == '\n') {
+                line = code.substring(n, i);
+                n = i;
+                if (line.contains("parse") || line.contains("toString")) {
+                    line = line.strip();
+                    String[] s = line.split(" ");
+                    for (String j : s) {
+                        if (j.contains("parse") || j.contains("toString")) {
+                            j = j.replace(";", "");
+                            res += j + "\r\n";
+                        }
+                    }
+                }
+            }
+        }
+        res = res.substring(0, res.length() - 2);
         return res;
     }
 }

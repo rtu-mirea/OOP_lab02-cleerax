@@ -25,6 +25,8 @@ public class Main {
                             "        x = Math.sqrt(x);\n" +
                             "        x = Math.abs(-4);\n" +
                             "        int borya = Math.abs(-2);\n" +
+                            "        int vitya = Integer.parseInt(\"5862\");\n" +
+                            "        String s = Integer.toString(vitya);\n"+
                             "    }\n" +
                             "}";
                     task1 t1 = new task1(code);
