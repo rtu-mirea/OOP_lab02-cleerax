@@ -24,6 +24,7 @@ public class Main {
                             "        x = Math.pow(4, 2);\n" +
                             "        x = Math.sqrt(x);\n" +
                             "        x = Math.abs(-4);\n" +
+                            "        int borya = Math.abs(-2);\n" +
                             "    }\n" +
                             "}";
                     task1 t1 = new task1(code);

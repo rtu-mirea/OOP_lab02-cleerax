@@ -33,9 +33,23 @@ public class task1 {
 
     public String vars() {
         String res = "";
-        String var = "";
-        String type = "";
-
+        String line;
+        int n = 0;
+        for (int i = 0; i < code.length(); i++) {
+            if (code.charAt(i) == '\n') {
+                line = code.substring(n, i);
+                n = i;
+                if (line.contains("Math.")) {
+                    line = line.strip();
+                    String[] s = line.split(" ");
+                    if (!(s[0].contains("=") || s[1].equals("="))) {
+                        s[1] = s[1].replace("=", "");
+                        res += s[0] + " " + s[1] + ", ";
+                    }
+                }
+            }
+        }
+        res = res.substring(0, res.length() - 2);
         return res;
     }
 
